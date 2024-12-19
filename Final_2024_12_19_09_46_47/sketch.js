@@ -203,8 +203,8 @@ function jumpSong() {
   mm.jump(jumpV);
 }
 function jumpSong2() {
-  jumpV = jumpV - 17.3424;
-  if (jumpV <= 17.3424) {
+  jumpV = jumpV - 39.165;
+  if (jumpV <= 39.165) {
     jumpV = 0;
   }
   mm.jump(jumpV);
