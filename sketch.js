@@ -149,12 +149,17 @@ function draw() {
   triangle(544, 640, 608, 640, 576, 0 + amplitude);
   
    // 눈 이미지 그리기
-  imageMode(CENTER); // 이미지 중심으로 배치
+  imageMode(CENTER);
   image(snowImage, width / 2, height / 2, snowSize, snowSize);
 }
 
 // play 
 function playMusic() {
+  if (mm2.isPlaying()) {
+    mm2.stop(); // mm2가 재생 중이라면 중지
+    button2.html("PLAY2"); // 버튼 텍스트 업데이트
+  }
+  
   if (!mm.isPlaying()) {
     mm.play();
     button.html("STOP");
@@ -165,6 +170,11 @@ function playMusic() {
 }
 
 function playMusic2() {
+  if (mm.isPlaying()) {
+    mm.stop(); // mm가 재생 중이라면 중지
+    button.html("PLAY"); // 버튼 텍스트 업데이트
+  }
+  
   if (!mm2.isPlaying()) {
     mm2.play();
     button2.html("STOP2");
@@ -173,6 +183,7 @@ function playMusic2() {
     button2.html("PLAY2");
   }
 }
+
 
 //pause 함수
 
@@ -196,15 +207,15 @@ function pauseMusic2() {
 // 구간 건너뛰기 함수
 
 function jumpSong() {
-  jumpV = jumpV + 17.3424;
-  if (jumpV + 17.3424 >= 173.424) {
-    jumpV = 173.423;
+  jumpV = jumpV + 39.165;
+  if (jumpV + 39.165 >= 195.835) {
+    jumpV = 195.835;
   }
   mm.jump(jumpV);
 }
 function jumpSong2() {
-  jumpV = jumpV - 17.3424;
-  if (jumpV <= 17.3424) {
+  jumpV = jumpV - 39.165;
+  if (jumpV <= 39.165) {
     jumpV = 0;
   }
   mm.jump(jumpV);
@@ -212,15 +223,15 @@ function jumpSong2() {
 
 
 function jumpSong_2() {
-  jumpV = jumpV + 17.3424;
-  if (jumpV + 17.3424 >= 173.424) {
-    jumpV = 173.423;
+  jumpV = jumpV + 24.71;
+  if (jumpV + 24.71 >= 148) {
+    jumpV = 148;
   }
   mm2.jump(jumpV);
 }
 function jumpSong2_2() {
-  jumpV = jumpV - 17.3424;
-  if (jumpV <= 17.3424) {
+  jumpV = jumpV - 24.71;
+  if (jumpV <= 24.71) {
     jumpV = 0;
   }
   mm2.jump(jumpV);
