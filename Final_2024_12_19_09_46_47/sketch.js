@@ -155,6 +155,11 @@ function draw() {
 
 // play 
 function playMusic() {
+  if (mm2.isPlaying()) {
+    mm2.stop(); // mm2가 재생 중이라면 중지
+    button2.html("PLAY2"); // 버튼 텍스트 업데이트
+  }
+  
   if (!mm.isPlaying()) {
     mm.play();
     button.html("STOP");
@@ -165,6 +170,11 @@ function playMusic() {
 }
 
 function playMusic2() {
+  if (mm.isPlaying()) {
+    mm.stop(); // mm가 재생 중이라면 중지
+    button.html("PLAY"); // 버튼 텍스트 업데이트
+  }
+  
   if (!mm2.isPlaying()) {
     mm2.play();
     button2.html("STOP2");
@@ -173,6 +183,7 @@ function playMusic2() {
     button2.html("PLAY2");
   }
 }
+
 
 //pause 함수
 
