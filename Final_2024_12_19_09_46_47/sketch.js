@@ -212,15 +212,15 @@ function jumpSong2() {
 
 
 function jumpSong_2() {
-  jumpV = jumpV + 17.3424;
-  if (jumpV + 17.3424 >= 173.424) {
-    jumpV = 173.423;
+  jumpV = jumpV + 24.71;
+  if (jumpV + 24.71 >= 148) {
+    jumpV = 148;
   }
   mm2.jump(jumpV);
 }
 function jumpSong2_2() {
-  jumpV = jumpV - 17.3424;
-  if (jumpV <= 17.3424) {
+  jumpV = jumpV - 24.71;
+  if (jumpV <= 24.71) {
     jumpV = 0;
   }
   mm2.jump(jumpV);
