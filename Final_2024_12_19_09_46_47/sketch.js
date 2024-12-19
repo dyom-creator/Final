@@ -196,9 +196,9 @@ function pauseMusic2() {
 // 구간 건너뛰기 함수
 
 function jumpSong() {
-  jumpV = jumpV + 17.3424;
-  if (jumpV + 17.3424 >= 173.424) {
-    jumpV = 173.423;
+  jumpV = jumpV + 39.165;
+  if (jumpV + 39.165 >= 195.835) {
+    jumpV = 195.835;
   }
   mm.jump(jumpV);
 }
