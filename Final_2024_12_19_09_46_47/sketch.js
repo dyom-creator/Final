@@ -149,7 +149,7 @@ function draw() {
   triangle(544, 640, 608, 640, 576, 0 + amplitude);
   
    // 눈 이미지 그리기
-  imageMode(CENTER); // 이미지 중심으로 배치
+  imageMode(CENTER);
   image(snowImage, width / 2, height / 2, snowSize, snowSize);
 }
 
